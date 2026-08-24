@@ -1,16 +1,16 @@
-import { useState } from "react";
 import "./App.css";
+import { NavLink } from "react-router";
 
 function Booking() {
   return (
     <>
-      <section id="center">
+      <section id="top">
         <div>
-          <h1>Get started</h1>
-          <p>
-            Edit <code>src/App.jsx</code> and save to test <code>HMR</code>
-          </p>
+          <h1>Booking page</h1>
         </div>
+        <NavLink to="/" end>
+          <p>Home Page</p>
+        </NavLink>
       </section>
     </>
   );
