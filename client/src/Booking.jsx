@@ -1,9 +1,17 @@
 import "./App.css";
 import { NavLink } from "react-router";
+import { useEffect, useState } from "react";
+import useFetch from "./fetch";
 
 function Booking() {
+  const { data: data1 } = useFetch("http://localhost:5112/health");
+  const { data: data2 } = useFetch("http://localhost:5112/test");
+
   return (
     <>
+      <div>{data1.message}</div>
+      <div>{data2.message}</div>
+
       <section id="top">
         <div>
           <h1>Booking page</h1>
@@ -38,6 +46,9 @@ function Booking() {
             <button>1:00pm</button>
           </div>
         </div>
+      </section>
+      <section>
+        <div></div>
       </section>
     </>
   );
